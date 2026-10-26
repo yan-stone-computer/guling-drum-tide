@@ -39,79 +39,48 @@ if (reduceMotion || !('IntersectionObserver' in window)) {
   revealItems.forEach((item) => revealObserver.observe(item));
 }
 
-const lookbook = document.querySelector('[data-lookbook]');
-const lookCards = [...document.querySelectorAll('.look')];
-const prevButton = document.querySelector('[data-lookbook-prev]');
-const nextButton = document.querySelector('[data-lookbook-next]');
-const currentLabel = document.querySelector('[data-lookbook-current]');
+const mapExplorer = document.querySelector('[data-map-explorer]');
+const mapPanel = document.querySelector('#map-panel');
+const mapImage = document.querySelector('[data-map-image]');
+const mapBadge = document.querySelector('[data-map-badge]');
+const mapTitle = document.querySelector('[data-map-title]');
+const mapCopy = document.querySelector('[data-map-copy]');
+const mapTabs = [...document.querySelectorAll('[role="tab"]')];
 
-function nearestLookIndex() {
-  let nearest = 0;
-  let nearestDistance = Infinity;
-  const start = parseFloat(getComputedStyle(lookbook).paddingLeft);
-  lookCards.forEach((card, index) => {
-    const distance = Math.abs(card.offsetLeft - lookbook.scrollLeft - start);
-    if (distance < nearestDistance) {
-      nearest = index;
-      nearestDistance = distance;
-    }
+function selectMap(tab) {
+  if (tab.getAttribute('aria-selected') === 'true') return;
+
+  mapTabs.forEach((item) => {
+    const selected = item === tab;
+    item.setAttribute('aria-selected', String(selected));
+    item.tabIndex = selected ? 0 : -1;
   });
-  return nearest;
+  mapPanel.setAttribute('aria-labelledby', tab.id);
+
+  mapExplorer.classList.add('is-changing');
+  window.setTimeout(() => {
+    mapImage.src = tab.dataset.mapImageSrc;
+    mapImage.alt = tab.dataset.mapImageAlt;
+    mapBadge.textContent = tab.dataset.mapBadge;
+    mapTitle.textContent = tab.dataset.mapTitle;
+    mapCopy.textContent = tab.dataset.mapCopy;
+    mapExplorer.classList.remove('is-changing');
+  }, reduceMotion ? 0 : 140);
 }
 
-function updateLookbook() {
-  const maxScroll = lookbook.scrollWidth - lookbook.clientWidth;
-  prevButton.disabled = lookbook.scrollLeft < 8;
-  nextButton.disabled = lookbook.scrollLeft >= maxScroll - 8;
-  const nearest = nearestLookIndex();
-  currentLabel.textContent = String(nearest + 1).padStart(2, '0');
-}
-
-function scrollLookbook(direction) {
-  const targetIndex = Math.max(0, Math.min(lookCards.length - 1, nearestLookIndex() + direction));
-  const card = lookCards[targetIndex];
-  const start = parseFloat(getComputedStyle(lookbook).paddingLeft);
-  lookbook.scrollTo({
-    left: card.offsetLeft - start,
-    behavior: reduceMotion ? 'auto' : 'smooth'
+mapTabs.forEach((tab, index) => {
+  tab.addEventListener('click', () => selectMap(tab));
+  tab.addEventListener('keydown', (event) => {
+    if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+    event.preventDefault();
+    let next = index;
+    if (event.key === 'ArrowLeft') next = (index - 1 + mapTabs.length) % mapTabs.length;
+    if (event.key === 'ArrowRight') next = (index + 1) % mapTabs.length;
+    if (event.key === 'Home') next = 0;
+    if (event.key === 'End') next = mapTabs.length - 1;
+    mapTabs[next].focus();
+    selectMap(mapTabs[next]);
   });
-}
-
-prevButton.addEventListener('click', () => scrollLookbook(-1));
-nextButton.addEventListener('click', () => scrollLookbook(1));
-lookbook.addEventListener('scrollend', updateLookbook);
-lookbook.addEventListener('scroll', () => {
-  window.clearTimeout(lookbook.scrollTimer);
-  lookbook.scrollTimer = window.setTimeout(updateLookbook, 90);
-}, { passive: true });
-updateLookbook();
-
-const lookDialog = document.querySelector('[data-look-dialog]');
-const dialogImage = document.querySelector('[data-look-dialog-image]');
-const dialogMark = document.querySelector('[data-look-dialog-mark]');
-const dialogSeason = document.querySelector('[data-look-dialog-season]');
-const dialogWorld = document.querySelector('[data-look-dialog-world]');
-const dialogTitle = document.querySelector('[data-look-dialog-title]');
-const dialogCopy = document.querySelector('[data-look-dialog-copy]');
-const dialogDetail = document.querySelector('[data-look-dialog-detail]');
-
-document.querySelectorAll('[data-look-image]').forEach((button) => {
-  button.addEventListener('click', () => {
-    dialogImage.src = button.dataset.lookImage;
-    dialogImage.alt = button.querySelector('img')?.alt || '';
-    dialogMark.src = button.dataset.lookMark;
-    dialogSeason.textContent = button.dataset.lookSeason;
-    dialogWorld.textContent = button.dataset.lookWorld;
-    dialogTitle.textContent = button.dataset.lookTitle;
-    dialogCopy.textContent = button.dataset.lookCopy;
-    dialogDetail.textContent = button.dataset.lookDetail;
-    lookDialog.showModal();
-  });
-});
-
-document.querySelector('[data-close-look-dialog]').addEventListener('click', () => lookDialog.close());
-lookDialog.addEventListener('click', (event) => {
-  if (event.target === lookDialog) lookDialog.close();
 });
 
 document.querySelector('[data-year]').textContent = new Date().getFullYear();

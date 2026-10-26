@@ -6,11 +6,11 @@
 - [下载 Windows 安装包](https://github.com/yan-stone-computer/guling-drum-tide/releases/latest/download/Guling-Setup-1.0.3-x64.exe)
 - [查看 Release](https://github.com/yan-stone-computer/guling-drum-tide/releases)
 
-![四时衣冠官网预览](docs/shots/desktop-hero.png)
+![四时灯阵游戏官网预览](docs/shots/desktop-hero.png)
 
 ## 内容
 
-- `docs/`：GitHub Pages 官网，包含四时衣冠、地图、实机截图和下载入口。
+- `docs/`：GitHub Pages 官网，包含四时灯阵、核心玩法、四时地图、角色武器、实机截图和下载入口。
 - `docs/design-tokens.json`：官网色板与语义颜色。
 - GitHub Release：Windows x64 安装包与 SHA256 校验文件。
 

@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#efe6d3">
-  <meta name="description" content="《鼓令 · DRUM TIDE》官方四时衣冠视觉特辑。以端阳、中秋、元宵、春节为线索，进入四时灯阵。">
-  <title>鼓令 · DRUM TIDE | 四时衣冠</title>
+  <meta name="description" content="《鼓令 · DRUM TIDE》是一款以中国传统节庆为舞台的 4v4 彩墨竞技游戏。争夺四时灯台，在鼓声中累积更高的文化浓度。">
+  <title>鼓令 · DRUM TIDE | 四时灯阵</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23c43a2f'/%3E%3Cpath d='M14 21h36v7H14zm4 11h28v7H18zm7 11h14v8H25z' fill='%23efe6d3'/%3E%3C/svg%3E">
   <link rel="preload" as="image" href="./assets/game/menu_bg.webp" fetchpriority="high">
   <link rel="stylesheet" href="./css/site.css">
@@ -21,9 +21,9 @@
     </a>
 
     <nav class="desktop-nav" aria-label="主导航">
-      <a href="#wardrobe">四时衣冠</a>
-      <a href="#lantern-array">节令灯阵</a>
-      <a href="#game-world">鼓令世界</a>
+      <a href="#gameplay">核心玩法</a>
+      <a href="#maps">四时地图</a>
+      <a href="#spirits">墨灵与武器</a>
     </nav>
 
     <div class="header-actions">
@@ -41,12 +41,12 @@
 
   <div class="mobile-menu" id="mobile-menu" hidden>
     <nav aria-label="移动端导航">
-      <a href="#wardrobe">四时衣冠 <span>端阳 / 中秋 / 元宵 / 春节</span></a>
-      <a href="#lantern-array">节令灯阵 <span>四时地图</span></a>
-      <a href="#game-world">鼓令世界 <span>4v4 彩墨夺灯</span></a>
-      <a href="https://github.com/yan-stone-computer/guling-drum-tide/releases/latest/download/Guling-Setup-1.0.3-x64.exe">下载游戏 <span>WINDOWS</span></a>
+      <a href="#gameplay">核心玩法 <span>三步夺灯</span></a>
+      <a href="#maps">四时地图 <span>端阳 / 中秋 / 元宵 / 春节</span></a>
+      <a href="#spirits">墨灵与武器 <span>角色 / 装备 / 彩墨</span></a>
+      <a href="#download">下载游戏 <span>WINDOWS</span></a>
     </nav>
-    <p class="mobile-menu__note">衣随节令，鼓定灯台。</p>
+    <p class="mobile-menu__note">四时灯台已亮，击鼓即可入阵。</p>
   </div>
 
   <main id="main">
@@ -57,248 +57,232 @@
       <div class="hero__wash" aria-hidden="true"></div>
 
       <div class="hero__copy">
-        <p class="hero__kicker">《鼓令 · DRUM TIDE》官方四时特辑</p>
-        <h1 id="hero-title">衣承<br><em>四时</em></h1>
-        <p class="hero__english">Wear the rhythm.</p>
+        <p class="hero__kicker">中国传统节庆 · 4v4 彩墨竞技</p>
+        <h1 id="hero-title">一鼓<br><em>定四时</em></h1>
+        <p class="hero__english">Paint. Hold. Sound the drum.</p>
         <p class="hero__lede">
-          从端阳竞渡到元宵灯会，把四座节令灯台化作四种衣冠轮廓。
-          这是属于《鼓令》的时尚图鉴，也是下一局开鼓前的入场仪式。
+          四座节令灯台散落场上。用彩墨涂地夺灯，守住灯阵，
+          鼓声每 30 秒指定新的主灯。180 秒内，文化浓度更高的一方胜出。
         </p>
         <div class="hero__actions">
           <a class="primary-link" href="https://github.com/yan-stone-computer/guling-drum-tide/releases/latest/download/Guling-Setup-1.0.3-x64.exe">
             下载 Windows 版
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
           </a>
-          <a class="quiet-link" href="#wardrobe">浏览四时衣冠</a>
+          <a class="quiet-link" href="#gameplay">先看玩法</a>
         </div>
         <dl class="hero__facts">
+          <div><dt>4v4</dt><dd>墨灵团队竞技</dd></div>
           <div><dt>04</dt><dd>节令灯台</dd></div>
-          <div><dt>4v4</dt><dd>彩墨对局</dd></div>
-          <div><dt>180</dt><dd>秒定胜负</dd></div>
+          <div><dt>180</dt><dd>秒一局</dd></div>
         </dl>
       </div>
 
-      <figure class="hero__look">
-        <img class="hero__emblem" src="./assets/game/emblem_duanwu.webp" width="512" height="512" alt="">
-        <img class="hero__portrait" src="./assets/images/hero.webp" width="1344" height="768"
-             alt="以端阳龙舟与墨浪为灵感的黑色层叠大衣，配朱砂长带。">
+      <figure class="hero__gameplay">
+        <div class="hero__screen">
+          <img src="./assets/screens/character.png" width="1024" height="576"
+               alt="《鼓令》实机画面，墨灵角色站在端午四时灯阵广场。">
+          <span class="hero__live">实机画面</span>
+          <span class="hero__timer">03:00</span>
+        </div>
         <figcaption>
-          <span>端阳 · 墨浪</span>
-          <span>A/W 2026 / 01</span>
+          <span>端午 · 龙舟渡口</span>
+          <span>PLAYER + 3 墨灵 VS 4 墨灵</span>
         </figcaption>
       </figure>
 
-      <p class="hero__edition" aria-hidden="true">四时衣冠 / SEASONAL COUTURE</p>
+      <p class="hero__edition" aria-hidden="true">FOUR SEASONS / ONE LANTERN ARRAY</p>
     </section>
 
     <div class="season-strip" aria-label="四时节令">
       <div class="season-strip__track">
-        <span>端阳 · 龙舟竞渡</span><i></i>
-        <span>中秋 · 月宴望圆</span><i></i>
-        <span>元宵 · 灯火游园</span><i></i>
-        <span>春节 · 庙会击鼓</span><i></i>
-        <span>端阳 · 龙舟竞渡</span><i></i>
-        <span>中秋 · 月宴望圆</span><i></i>
-        <span>元宵 · 灯火游园</span><i></i>
-        <span>春节 · 庙会击鼓</span><i></i>
+        <span>端阳 · 龙舟渡口</span><i></i>
+        <span>中秋 · 月宴</span><i></i>
+        <span>元宵 · 灯会</span><i></i>
+        <span>春节 · 庙会</span><i></i>
+        <span>端阳 · 龙舟渡口</span><i></i>
+        <span>中秋 · 月宴</span><i></i>
+        <span>元宵 · 灯会</span><i></i>
+        <span>春节 · 庙会</span><i></i>
       </div>
     </div>
 
-    <section class="prologue section-shell" aria-labelledby="prologue-title" data-reveal>
-      <p class="section-label">四时入衣 / FOUR SEASONS IN FORM</p>
-      <div class="prologue__statement">
-        <h2 id="prologue-title">节令不是背景。<br>它决定衣摆如何落下。</h2>
-        <p>
-          四时衣冠沿用游戏里的水墨、灯笼、月白与朱砂，
-          将四张地图的色温、建筑和节日物件转译成四种当代表情。
-        </p>
+    <section class="pitch section-shell" aria-labelledby="pitch-title" data-reveal>
+      <div class="pitch__copy">
+        <p class="section-label">What is Drum Tide</p>
+        <h2 id="pitch-title">把节庆记忆，<br>变成一场灯阵争夺。</h2>
       </div>
-      <img class="prologue__stamp" src="./assets/game/emblem_zhongqiu.webp"
-           width="512" height="512" alt="" loading="lazy">
+      <p class="pitch__body">
+        《鼓令》以端午、中秋、元宵、春节为舞台。
+        四张地图不是背景板，它们各自拥有一座节令灯台。
+        你不只是占点，更是在鼓声、彩墨和队友走位之间，
+        守住一整套属于四时的文化浓度。
+      </p>
     </section>
 
-    <section class="wardrobe" id="wardrobe" aria-labelledby="wardrobe-title">
-      <div class="wardrobe__head section-shell">
-        <div>
-          <p class="section-label">The seasonal wardrobe</p>
-          <h2 id="wardrobe-title">四时衣冠</h2>
-        </div>
-        <p>
-          每一套造型对应一张节令地图。颜色取自灯台、天空与彩墨，
-          廓形则回应角色在场上奔跑、回身与击鼓的动作。
-        </p>
-      </div>
-
-      <div class="lookbook" data-lookbook>
-        <article class="look look--lead">
-          <button class="look__open" type="button"
-                  data-look-image="./assets/images/hero.webp"
-                  data-look-mark="./assets/game/emblem_duanwu.webp"
-                  data-look-season="端阳"
-                  data-look-world="龙舟渡口"
-                  data-look-title="墨浪 · 龙舟襟"
-                  data-look-copy="层叠黑色羊毛模拟竞渡时的浪峰，背后朱砂长带呼应龙舟旗。肩部折面来自端午地图里的牌坊与桥拱。"
-                  data-look-detail="羊毛 / 真丝内衬 / 手工定型">
-            <span class="look__media">
-              <img src="./assets/images/hero.webp" width="1344" height="768"
-                   alt="端阳主题黑色层叠大衣，朱砂长带横过地面。" loading="lazy">
-              <span class="look__view">展开衣冠</span>
-            </span>
-            <span class="look__meta">
-              <span><b>01</b> 端阳 / 墨浪</span>
-              <span>龙舟渡口</span>
-            </span>
-          </button>
-        </article>
-
-        <article class="look">
-          <button class="look__open" type="button"
-                  data-look-image="./assets/images/look-bone.webp"
-                  data-look-mark="./assets/game/emblem_zhongqiu.webp"
-                  data-look-season="中秋"
-                  data-look-world="月宴"
-                  data-look-title="月白 · 桂影袍"
-                  data-look-copy="月白压褶从肩部向下展开，像月光落在桂树与亭台之间。斜向门襟保留圆弧月洞的路径，行走时形成饱满的空间感。"
-                  data-look-detail="压褶棉缎 / 竹纤维 / 隐藏式扣合">
-            <span class="look__media">
-              <img src="./assets/images/look-bone.webp" width="768" height="1024"
-                   alt="中秋主题月白色压褶长袍。" loading="lazy">
-              <span class="look__view">展开衣冠</span>
-            </span>
-            <span class="look__meta">
-              <span><b>02</b> 中秋 / 月白</span>
-              <span>月宴</span>
-            </span>
-          </button>
-        </article>
-
-        <article class="look look--wide">
-          <button class="look__open" type="button"
-                  data-look-image="./assets/images/editorial.webp"
-                  data-look-mark="./assets/game/emblem_yuanxiao.webp"
-                  data-look-season="元宵"
-                  data-look-world="灯会"
-                  data-look-title="灯影 · 双生行"
-                  data-look-copy="一黑一白，如灯会夜里各自提灯而行的人。黑色长衣收进一线朱红，对应游戏主灯亮起时，全场视线同时转向的瞬间。"
-                  data-look-detail="精纺羊毛 / 真丝滚边 / 可拆卸主灯徽记">
-            <span class="look__media">
-              <img src="./assets/images/editorial.webp" width="1344" height="768"
-                   alt="元宵主题一黑一白两套长衣并行。" loading="lazy">
-              <span class="look__view">展开衣冠</span>
-            </span>
-            <span class="look__meta">
-              <span><b>03</b> 元宵 / 灯影</span>
-              <span>灯会</span>
-            </span>
-          </button>
-        </article>
-
-        <article class="look">
-          <button class="look__open" type="button"
-                  data-look-image="./assets/images/look-cinnabar.webp"
-                  data-look-mark="./assets/game/emblem_chunjie.webp"
-                  data-look-season="春节"
-                  data-look-world="庙会"
-                  data-look-title="朱灯 · 迎春裾"
-                  data-look-copy="朱砂真丝从肩后垂落，像庙会里一盏被风吹斜的灯笼。色彩直接取自春节地图的灯笼与春联，松弛衣摆留给转身和奔跑。"
-                  data-look-detail="砂洗真丝 / 手工卷边 / 可拆卸飘带">
-            <span class="look__media">
-              <img src="./assets/images/look-cinnabar.webp" width="768" height="1024"
-                   alt="春节主题朱砂红真丝衣冠，长飘带垂落。" loading="lazy">
-              <span class="look__view">展开衣冠</span>
-            </span>
-            <span class="look__meta">
-              <span><b>04</b> 春节 / 朱灯</span>
-              <span>庙会</span>
-            </span>
-          </button>
-        </article>
-      </div>
-
-      <div class="lookbook__controls section-shell">
-        <p><span data-lookbook-current>01</span> / 04</p>
-        <div>
-          <button class="round-button" type="button" data-lookbook-prev aria-label="上一套衣冠">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H6m6-6-6 6 6 6"/></svg>
-          </button>
-          <button class="round-button" type="button" data-lookbook-next aria-label="下一套衣冠">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m-6-6 6 6-6 6"/></svg>
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <section class="look-editorial" aria-labelledby="look-editorial-title">
-      <img src="./assets/game/title.webp" width="896" height="512"
-           alt="四时水墨长卷，由江南水乡、月色、灯笼与庙会渐次过渡。" loading="lazy">
-      <div class="look-editorial__veil"></div>
-      <div class="look-editorial__copy section-shell">
-        <p class="section-label">From the game world</p>
-        <h2 id="look-editorial-title">四时流转，<br>衣冠随之。</h2>
-        <blockquote>“灯台在场上轮转，季节也在身上流转。”</blockquote>
-      </div>
-    </section>
-
-    <section class="lantern-array" id="lantern-array" aria-labelledby="lantern-title">
-      <div class="lantern-array__head section-shell" data-reveal>
-        <div>
-          <p class="section-label">Four festival maps</p>
-          <h2 id="lantern-title">四时灯阵</h2>
-        </div>
-        <p>
-          端阳的桥、中秋的月、元宵的灯、春节的庙会，
-          在游戏里是四座灯台，也是这套衣冠的四种视觉底稿。
-        </p>
-      </div>
-
-      <figure class="lantern-array__screen section-shell" data-reveal>
-        <img src="./assets/screens/maps-four.png" width="1600" height="900"
-             alt="《鼓令》四张实机地图：端午龙舟渡口、春节庙会、元宵灯会、中秋月宴。" loading="lazy">
-        <figcaption>四时灯阵实机地图 / 4 maps in play</figcaption>
+    <section class="gameplay" id="gameplay" aria-labelledby="gameplay-title">
+      <figure class="gameplay__visual" data-reveal>
+        <img src="./assets/screens/ingame-mural.png" width="1024" height="576"
+             alt="端午对局实机画面，玩家在彩墨壁画前争夺灯台。" loading="lazy">
+        <figcaption>四时灯阵 / 端午龙舟渡口</figcaption>
       </figure>
 
-      <div class="map-archive section-shell">
-        <article data-reveal>
-          <img src="./assets/game/map_duanwu.webp" width="896" height="512" alt="端午龙舟渡口水墨图。" loading="lazy">
-          <div><span>01</span><h3>端阳 · 龙舟渡口</h3><p>墨浪、拱桥与龙首舟</p></div>
-        </article>
-        <article data-reveal>
-          <img src="./assets/game/map_zhongqiu.webp" width="896" height="512" alt="中秋月宴水墨图，圆月、桂树、玉兔与月饼。" loading="lazy">
-          <div><span>02</span><h3>中秋 · 月宴</h3><p>月白、桂影与圆月门</p></div>
-        </article>
-        <article data-reveal>
-          <img src="./assets/game/map_yuanxiao.webp" width="896" height="512" alt="元宵灯会水墨图，河岸挂满灯火。" loading="lazy">
-          <div><span>03</span><h3>元宵 · 灯会</h3><p>主灯、夜游与水面反光</p></div>
-        </article>
-        <article data-reveal>
-          <img src="./assets/game/map_chunjie.webp" width="896" height="512" alt="春节庙会水墨图，灯笼与年货摊位。" loading="lazy">
-          <div><span>04</span><h3>春节 · 庙会</h3><p>朱砂、春联与人群</p></div>
-        </article>
+      <div class="gameplay__copy" data-reveal>
+        <p class="section-label">How to play</p>
+        <h2 id="gameplay-title">三步，<br>把灯台变成你的节令。</h2>
+        <ol class="gameplay__steps">
+          <li>
+            <span>01</span>
+            <div>
+              <h3>涂彩夺灯</h3>
+              <p>用本方彩墨覆盖灯台周边 65%，再与队友站入 2 秒。抢敌方灯台前，先中和原来的颜色。</p>
+            </div>
+          </li>
+          <li>
+            <span>02</span>
+            <div>
+              <h3>听鼓转场</h3>
+              <p>每 30 秒，鼓声指定一座主灯。主灯持续 20 秒，占领进度与文化产出翻倍，全场必须转移阵地。</p>
+            </div>
+          </li>
+          <li>
+            <span>03</span>
+            <div>
+              <h3>守住浓度</h3>
+              <p>持有 1 到 4 座灯台时，每秒产出 0.6 到 4.2 点文化浓度。比赛结束时，浓度高者获胜。</p>
+            </div>
+          </li>
+        </ol>
+        <div class="gameplay__stats">
+          <div><b>4v4</b><span>玩家与三名墨灵队友</span></div>
+          <div><b>180s</b><span>一局固定时长</span></div>
+          <div><b>×2</b><span>主灯占领与产出</span></div>
+        </div>
       </div>
     </section>
 
-    <section class="game-world" id="game-world" aria-labelledby="world-title">
-      <figure class="game-world__screen" data-reveal>
-        <img src="./assets/screens/character.png" width="1024" height="576"
-             alt="《鼓令》实机画面，墨灵角色站在端午灯阵广场。" loading="lazy">
-        <figcaption>四时灯阵实机 /《鼓令 · DRUM TIDE》</figcaption>
-      </figure>
-      <div class="game-world__copy" data-reveal>
-        <p class="section-label">Enter the lantern array</p>
-        <h2 id="world-title">衣服穿在身上，<br>灯阵赢在场上。</h2>
+    <section class="maps" id="maps" aria-labelledby="maps-title">
+      <div class="maps__head section-shell" data-reveal>
+        <p class="section-label">Four seasonal battlegrounds</p>
+        <h2 id="maps-title">四时地图，<br>四种夺灯节奏。</h2>
+        <p>从水路、庙会到月中庭院，每张地图用建筑、光线与灯台位置改变战斗路线。</p>
+      </div>
+
+      <div class="map-explorer section-shell" data-map-explorer data-reveal>
+        <div class="map-explorer__stage" id="map-panel" role="tabpanel" aria-live="polite">
+          <img src="./assets/game/map_duanwu.webp" width="896" height="512"
+               alt="端午龙舟渡口水墨图，龙舟穿过拱桥与江南水乡。"
+               data-map-image>
+          <span class="map-explorer__badge" data-map-badge>端阳 · 龙舟渡口</span>
+          <div class="map-explorer__caption">
+            <h3 data-map-title>水路决定夺灯路线</h3>
+            <p data-map-copy>桥拱与河岸把主战场挤成狭长通道。灯台靠水，抢灯后更容易被从侧翼反打。</p>
+          </div>
+        </div>
+
+        <div class="map-explorer__tabs" role="tablist" aria-label="选择四时地图">
+          <button type="button" role="tab" id="map-tab-duanwu" aria-controls="map-panel" aria-selected="true"
+                  data-map-image-src="./assets/game/map_duanwu.webp"
+                  data-map-image-alt="端午龙舟渡口水墨图，龙舟穿过拱桥与江南水乡。"
+                  data-map-badge="端阳 · 龙舟渡口"
+                  data-map-title="水路决定夺灯路线"
+                  data-map-copy="桥拱与河岸把主战场挤成狭长通道。灯台靠水，抢灯后更容易被从侧翼反打。">
+            <img src="./assets/game/emblem_duanwu.webp" width="512" height="512" alt="">
+            <span>端阳</span>
+          </button>
+          <button type="button" role="tab" id="map-tab-zhongqiu" aria-controls="map-panel" aria-selected="false" tabindex="-1"
+                  data-map-image-src="./assets/game/map_zhongqiu.webp"
+                  data-map-image-alt="中秋月宴水墨图，圆月、桂树、玉兔与月饼。"
+                  data-map-badge="中秋 · 月宴"
+                  data-map-title="月下庭院分散战线"
+                  data-map-copy="圆月、亭台与桂树把视野切成多个方向。主灯亮起时，绕后的路线比正面冲锋更重要。">
+            <img src="./assets/game/emblem_zhongqiu.webp" width="512" height="512" alt="">
+            <span>中秋</span>
+          </button>
+          <button type="button" role="tab" id="map-tab-yuanxiao" aria-controls="map-panel" aria-selected="false" tabindex="-1"
+                  data-map-image-src="./assets/game/map_yuanxiao.webp"
+                  data-map-image-alt="元宵灯会水墨图，河岸挂满灯火。"
+                  data-map-badge="元宵 · 灯会"
+                  data-map-title="灯火藏住每一次转场"
+                  data-map-copy="高对比夜景与密集灯火让路线更难读。主灯亮起后，彩墨与灯影会同时暴露队伍位置。">
+            <img src="./assets/game/emblem_yuanxiao.webp" width="512" height="512" alt="">
+            <span>元宵</span>
+          </button>
+          <button type="button" role="tab" id="map-tab-chunjie" aria-controls="map-panel" aria-selected="false" tabindex="-1"
+                  data-map-image-src="./assets/game/map_chunjie.webp"
+                  data-map-image-alt="春节庙会水墨图，灯笼与年货摊位。"
+                  data-map-badge="春节 · 庙会"
+                  data-map-title="开阔广场爆发正面团战"
+                  data-map-copy="庙会广场把人流、摊位和灯台聚在同一视野。谁先铺开彩墨，谁就能把节庆热闹变成防线。">
+            <img src="./assets/game/emblem_chunjie.webp" width="512" height="512" alt="">
+            <span>春节</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="spirits" id="spirits" aria-labelledby="spirits-title">
+      <div class="spirits__copy" data-reveal>
+        <p class="section-label">Ink spirits and festival arms</p>
+        <h2 id="spirits-title">墨灵上阵，<br>节令为器。</h2>
         <p>
-          4 名墨灵对阵 4 名墨灵。用彩墨覆盖灯台，占住四时主灯，
-          在 180 秒内积累更高的文化浓度。每次鼓点落下，灯台上的颜色都会改写场上秩序。
+          玩家与三名墨灵组成队伍，对抗四名敌方墨灵。
+          主武器、副武器与节庆武器各自改变涂地、控场和远程压制。
         </p>
-        <dl class="game-world__rules">
-          <div><dt>持灯</dt><dd>1 / 2 / 3 / 4 座灯台决定文化浓度增速</dd></div>
-          <div><dt>主灯</dt><dd>每 30 秒指定一座主灯，占灯与产出翻倍</dd></div>
-          <div><dt>决胜</dt><dd>击鼓、夺灯、布彩，180 秒一局定胜负</dd></div>
+        <dl class="spirits__facts">
+          <div><dt>12</dt><dd>主武器</dd></div>
+          <div><dt>15</dt><dd>副武器</dd></div>
+          <div><dt>19</dt><dd>节庆武器</dd></div>
         </dl>
-        <a class="primary-link" href="https://github.com/yan-stone-computer/guling-drum-tide/releases/latest/download/Guling-Setup-1.0.3-x64.exe">
-          下载并开一局
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+        <a class="quiet-link" href="./assets/screens/loadout.png">查看完整装备面板</a>
+      </div>
+
+      <div class="spirits__gallery" data-reveal>
+        <figure class="spirits__roster">
+          <img src="./assets/screens/chibi.png" width="1400" height="800"
+               alt="四种墨灵角色：粽子、汤圆、毛笔与爆竹造型。">
+          <figcaption>四种墨灵形态</figcaption>
+        </figure>
+        <figure class="spirits__loadout">
+          <img src="./assets/screens/loadout.png" width="1024" height="576"
+               alt="《鼓令》装备面板，展示粽子机关枪等节令武器。">
+          <figcaption>节令武器与副武器配置</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="battle-cry" aria-labelledby="battle-title">
+      <img src="./assets/game/title.webp" width="896" height="512"
+           alt="四时水墨长卷，由江南水乡、月色、灯笼与庙会渐次过渡。">
+      <div class="battle-cry__veil"></div>
+      <div class="battle-cry__copy section-shell">
+        <p class="section-label">The match is about to begin</p>
+        <h2 id="battle-title">鼓声已响。<br>四时灯台等你入阵。</h2>
+        <p>离线 4v4，无需联网。选择墨灵与节令武器，下一局由你改写灯台归属。</p>
+        <a class="primary-link" href="#download">立即下载</a>
+      </div>
+      <figure class="battle-cry__result">
+        <img src="./assets/screens/result.png" width="1280" height="720"
+             alt="《鼓令》对局结算画面，展示双方文化浓度比分与灯台数据。" loading="lazy">
+      </figure>
+    </section>
+
+    <section class="download" id="download" aria-labelledby="download-title">
+      <div>
+        <p class="section-label">Windows x64 / Version 1.0.3</p>
+        <h2 id="download-title">下一声鼓，<br>从你开始。</h2>
+      </div>
+      <div class="download__panel">
+        <p>下载 Windows 安装包，离线体验完整四时灯阵。</p>
+        <a class="download__button" href="https://github.com/yan-stone-computer/guling-drum-tide/releases/latest/download/Guling-Setup-1.0.3-x64.exe">
+          <span>下载 Guling 1.0.3</span>
+          <small>Windows x64 / 约 121 MB</small>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m-5-5 5 5 5-5M5 20h14"/></svg>
         </a>
+        <div class="download__links">
+          <a href="https://github.com/yan-stone-computer/guling-drum-tide/releases/latest/download/Guling-Setup-1.0.3-x64.exe.sha256">SHA256 校验</a>
+          <a href="https://github.com/yan-stone-computer/guling-drum-tide/releases/tag/v1.0.3">版本说明</a>
+        </div>
       </div>
     </section>
   </main>
@@ -306,45 +290,18 @@
   <footer class="site-footer">
     <div class="site-footer__brand">
       <p>鼓令</p>
-      <span>DRUM TIDE<br>四时衣冠视觉特辑</span>
+      <span>DRUM TIDE<br>四时灯阵</span>
     </div>
-    <div class="site-footer__links">
-      <div>
-        <p>游戏入口</p>
-        <a href="https://github.com/yan-stone-computer/guling-drum-tide/releases/latest/download/Guling-Setup-1.0.3-x64.exe">下载 Windows 安装包</a>
-        <a href="#wardrobe">返回四时衣冠</a>
-      </div>
-      <div>
-        <p>项目资料</p>
-        <a href="https://github.com/yan-stone-computer/guling-drum-tide">项目主页</a>
-        <a href="#top">回到顶部</a>
-      </div>
-    </div>
+    <nav class="site-footer__links" aria-label="页脚导航">
+      <a href="#gameplay">核心玩法</a>
+      <a href="#maps">四时地图</a>
+      <a href="#spirits">墨灵与武器</a>
+      <a href="#download">下载游戏</a>
+    </nav>
     <div class="site-footer__base">
       <p>© <span data-year></span> 鼓令 · DRUM TIDE</p>
-      <p>水墨 / 节令 / 灯阵 / 4v4</p>
+      <p>彩墨 / 节令 / 灯阵 / 4v4</p>
     </div>
   </footer>
-
-  <dialog class="look-dialog" data-look-dialog aria-labelledby="look-dialog-title">
-    <button class="look-dialog__close" type="button" data-close-look-dialog aria-label="关闭衣冠详情">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
-    </button>
-    <figure class="look-dialog__visual">
-      <img src="./assets/images/hero.webp" width="1344" height="768" alt="" data-look-dialog-image>
-      <img class="look-dialog__mark" src="./assets/game/emblem_duanwu.webp"
-           width="512" height="512" alt="" data-look-dialog-mark>
-    </figure>
-    <div class="look-dialog__copy">
-      <p class="look-dialog__season"><span data-look-dialog-season></span> / <span data-look-dialog-world></span></p>
-      <h2 id="look-dialog-title" data-look-dialog-title></h2>
-      <p data-look-dialog-copy></p>
-      <p class="look-dialog__material" data-look-dialog-detail></p>
-      <a class="primary-link" href="https://github.com/yan-stone-computer/guling-drum-tide/releases/latest/download/Guling-Setup-1.0.3-x64.exe">
-        下载游戏体验
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
-      </a>
-    </div>
-  </dialog>
 </body>
 </html>

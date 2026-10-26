@@ -1,75 +1,22 @@
 {
-  "project": "鼓令 · DRUM TIDE / 四时衣冠",
-  "generatedWith": "ComfyUI Qwen-Image-2.1, local model",
-  "licenseNote": "Qwen-Image-2.1 weights use the Qwen Research License Agreement. Review commercial usage terms before publishing the site.",
-  "images": [
-    {
-      "file": "hero.webp",
-      "sourceFile": "mo-hero_00001_.png",
-      "width": 1344,
-      "height": 768,
-      "seed": 3509592423661213755,
-      "use": "首屏及端阳衣冠",
-      "prompt": "East Asian couture portrait in a brutalist gallery, sculptural black coat, bone-white collar, long cinnabar silk ribbon."
-    },
-    {
-      "file": "look-obsidian.webp",
-      "sourceFile": "mo-look-obsidian_00001_.png",
-      "width": 768,
-      "height": 1024,
-      "seed": 1405528542482972454,
-      "use": "服装体量与黑羊毛细节参考",
-      "prompt": "Vertical editorial portrait, sculptural matte black wool opera coat in a bone plaster gallery."
-    },
-    {
-      "file": "look-bone.webp",
-      "sourceFile": "mo-look-bone_00001_.png",
-      "width": 768,
-      "height": 1024,
-      "seed": 884913561997807421,
-      "use": "中秋月白衣冠",
-      "prompt": "Vertical editorial portrait, architectural bone-white cotton satin coat, diagonal pleats and asymmetric collar."
-    },
-    {
-      "file": "look-cinnabar.webp",
-      "sourceFile": "mo-look-cinnabar_00001_.png",
-      "width": 768,
-      "height": 1024,
-      "seed": 1101801899697786880,
-      "use": "春节朱灯衣冠",
-      "prompt": "Vertical editorial portrait, cinnabar sand-washed silk ensemble with a long shoulder panel and fluid trousers."
-    },
-    {
-      "file": "editorial.webp",
-      "sourceFile": "mo-editorial_00001_.png",
-      "width": 1344,
-      "height": 768,
-      "seed": 2771601928036746668,
-      "use": "元宵灯影双生衣冠",
-      "prompt": "Wide campaign image, two East Asian models in black and bone couture crossing a brutalist stone corridor."
-    },
-    {
-      "file": "atelier.webp",
-      "sourceFile": "mo-atelier_00001_.png",
-      "width": 1024,
-      "height": 768,
-      "seed": 6321921830038726082,
-      "use": "工艺细节备用素材",
-      "prompt": "Close-up of tailor hands shaping cinnabar silk over charcoal wool on a dark wooden worktable."
-    }
-  ],
-  "projectAssets": [
+  "project": "鼓令 · DRUM TIDE",
+  "source": "Existing game assets in this repository",
+  "assets": [
     "./game/menu_bg.webp",
-    "./game/emblem_duanwu.webp",
-    "./game/emblem_zhongqiu.webp",
-    "./game/emblem_yuanxiao.webp",
-    "./game/emblem_chunjie.webp",
     "./game/title.webp",
     "./game/map_duanwu.webp",
     "./game/map_zhongqiu.webp",
     "./game/map_yuanxiao.webp",
     "./game/map_chunjie.webp",
+    "./game/emblem_duanwu.webp",
+    "./game/emblem_zhongqiu.webp",
+    "./game/emblem_yuanxiao.webp",
+    "./game/emblem_chunjie.webp",
+    "./screens/character.png",
+    "./screens/ingame-mural.png",
     "./screens/maps-four.png",
-    "./screens/character.png"
+    "./screens/chibi.png",
+    "./screens/loadout.png",
+    "./screens/result.png"
   ]
 }
